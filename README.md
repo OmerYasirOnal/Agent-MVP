@@ -255,7 +255,7 @@ mvp-ai-agent/
 
 | Metric | Value |
 |--------|-------|
-| **Average Generation Time** | depending on the performance of the language model |
+| **Average Generation Time** | Depending on the performance of the language model |
 | **Supported File Types** | JavaScript, Python, HTML, CSS, JSON, Markdown |
 | **Max Project Complexity** | Medium to large applications |
 | **Concurrent Requests** | Limited by OpenRouter rate limits |
