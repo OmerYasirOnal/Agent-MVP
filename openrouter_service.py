@@ -1,5 +1,5 @@
 # OpenRouter Service for AI Agent MVP
-# Gemini 2.5 Pro API integration via OpenRouter.ai with comprehensive error handling and logging
+# AI Model API integration via OpenRouter.ai with comprehensive error handling and logging
 
 import os
 import logging
@@ -16,8 +16,9 @@ load_dotenv()
 
 class OpenRouterService:
     """
-    OpenRouter service class for Gemini 2.5 Pro interactions via OpenRouter.ai
+    OpenRouter service class for AI model interactions via OpenRouter.ai
     Handles API communication, error handling, and response processing
+    Supports dynamic model selection with comprehensive logging
     """
     
     def __init__(self):
@@ -27,7 +28,8 @@ class OpenRouterService:
             raise ValueError("OpenRouter API key not found. Please set OPENROUTER_API_KEY in .env file")
         
         self.api_endpoint = "https://openrouter.ai/api/v1/chat/completions"
-        self.model_name = "google/gemini-pro-1.5"
+        # Model can be overridden via environment variable for easy switching
+        self.model_name = os.getenv("OPENROUTER_MODEL", "qwen/qwen3-coder:free")
         
         # Set up headers for all requests
         self.headers = {
@@ -38,17 +40,17 @@ class OpenRouterService:
         logger.info("OpenRouter service initialized successfully")
         logger.info(f"Using model: {self.model_name}")
 
-    def get_gemini_response(self, prompt: str, temperature: float = 0.7, max_tokens: int = 4000) -> Optional[str]:
+    def get_model_response(self, prompt: str, temperature: float = 0.7, max_tokens: int = 4000) -> Optional[str]:
         """
-        Send prompt to Gemini 2.5 Pro via OpenRouter and get response
+        Send prompt to AI model via OpenRouter and get response
         
         Args:
-            prompt (str): The prompt to send to Gemini 2.5 Pro
+            prompt (str): The prompt to send to the AI model
             temperature (float): The creativity level (default: 0.7)
             max_tokens (int): Maximum tokens for response (default: 4000)
             
         Returns:
-            Optional[str]: Gemini 2.5 Pro response content or None if error
+            Optional[str]: AI model response content or None if error
         """
         try:
             logger.info(f"Sending request to {self.model_name} via OpenRouter")
@@ -88,7 +90,7 @@ class OpenRouterService:
             if "choices" in response_data and len(response_data["choices"]) > 0:
                 content = response_data["choices"][0]["message"]["content"]
                 
-                logger.info("✅ Gemini 2.5 Pro response received successfully")
+                logger.info(f"✅ {self.model_name} response received successfully")
                 logger.info(f"Response length: {len(content)} characters")
                 
                 return content
@@ -113,14 +115,14 @@ class OpenRouterService:
 # Global service instance
 openrouter_service = OpenRouterService()
 
-def get_gemini_response(prompt: str) -> Optional[str]:
+def get_model_response(prompt: str) -> Optional[str]:
     """
-    Convenience function to get Gemini 2.5 Pro response via OpenRouter
+    Convenience function to get AI model response via OpenRouter
     
     Args:
-        prompt (str): The prompt to send to Gemini 2.5 Pro
+        prompt (str): The prompt to send to the AI model
         
     Returns:
-        Optional[str]: Gemini 2.5 Pro response content or None if error
+        Optional[str]: AI model response content or None if error
     """
-    return openrouter_service.get_gemini_response(prompt) 
+    return openrouter_service.get_model_response(prompt) 

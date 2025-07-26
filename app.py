@@ -11,7 +11,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import asyncio
 
-from openrouter_service import get_gemini_response
+from openrouter_service import get_model_response
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -123,8 +123,8 @@ class AIAgentOrchestrator:
         analysis_prompt = self.load_prompt_template("analysis")
         formatted_prompt = analysis_prompt.replace("{project_description}", project_description)
         
-        # Get Gemini 2.5 Pro response via OpenRouter
-        analysis_content = get_gemini_response(formatted_prompt)
+        # Get AI model response via OpenRouter
+        analysis_content = get_model_response(formatted_prompt)
         if not analysis_content:
             raise HTTPException(status_code=500, detail="Failed to generate project analysis")
         
@@ -150,8 +150,8 @@ class AIAgentOrchestrator:
         design_prompt = self.load_prompt_template("design")
         formatted_prompt = design_prompt.replace("{analysis_content}", analysis_content)
         
-        # Get Gemini 2.5 Pro response via OpenRouter
-        design_content = get_gemini_response(formatted_prompt)
+        # Get AI model response via OpenRouter
+        design_content = get_model_response(formatted_prompt)
         if not design_content:
             raise HTTPException(status_code=500, detail="Failed to generate software design")
         
@@ -177,8 +177,8 @@ class AIAgentOrchestrator:
         coding_prompt = self.load_prompt_template("coding")
         formatted_prompt = coding_prompt.replace("{design_content}", design_content)
         
-        # Get Gemini 2.5 Pro response via OpenRouter
-        source_code_content = get_gemini_response(formatted_prompt)
+        # Get AI model response via OpenRouter
+        source_code_content = get_model_response(formatted_prompt)
         if not source_code_content:
             raise HTTPException(status_code=500, detail="Failed to generate source code")
         
@@ -204,8 +204,8 @@ class AIAgentOrchestrator:
         testing_prompt = self.load_prompt_template("testing")
         formatted_prompt = testing_prompt.replace("{source_code_content}", source_code_content)
         
-        # Get Gemini 2.5 Pro response via OpenRouter
-        testing_content = get_gemini_response(formatted_prompt)
+        # Get AI model response via OpenRouter
+        testing_content = get_model_response(formatted_prompt)
         if not testing_content:
             raise HTTPException(status_code=500, detail="Failed to generate testing documentation")
         
@@ -238,8 +238,8 @@ class AIAgentOrchestrator:
         formatted_prompt = formatted_prompt.replace("{source_code_content}", source_code_content)
         formatted_prompt = formatted_prompt.replace("{testing_content}", testing_content)
         
-        # Get Gemini 2.5 Pro response via OpenRouter
-        documentation_content = get_gemini_response(formatted_prompt)
+        # Get AI model response via OpenRouter
+        documentation_content = get_model_response(formatted_prompt)
         if not documentation_content:
             raise HTTPException(status_code=500, detail="Failed to generate project documentation")
         
