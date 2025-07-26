@@ -1,0 +1,52 @@
+# 🔍 Project Analysis Prompt for GPT-4o
+
+You are an expert software architect and business analyst. Your task is to analyze the given project description and provide a comprehensive project analysis.
+
+## 📋 **Project Description:**
+{project_description}
+
+## 🎯 **Your Task:**
+Analyze the above project and provide a comprehensive analysis in **Markdown format** covering the following sections:
+
+### 1. **📊 Project Overview**
+- Brief summary of the project
+- Core purpose and value proposition
+- Target audience/users
+
+### 2. **📋 Requirements Analysis**
+- **Functional Requirements:** What the system should do
+- **Non-functional Requirements:** Performance, security, scalability needs
+- **Business Requirements:** Business goals and success metrics
+
+### 3. **👥 User Stories**
+Create detailed user stories in the format:
+- **As a** [user type], **I want** [functionality], **so that** [benefit]
+- Include at least 5-8 user stories covering main functionality
+- Prioritize stories (High/Medium/Low priority)
+
+### 4. **🏗️ Technical Requirements**
+- **Programming Languages:** Recommended tech stack
+- **Frameworks/Libraries:** Specific tools needed
+- **Database:** Data storage requirements
+- **External APIs:** Third-party integrations needed
+- **Infrastructure:** Hosting and deployment considerations
+
+### 5. **⚠️ Risks & Challenges**
+- Technical risks and mitigation strategies
+- Potential bottlenecks
+- Security considerations
+- Scalability challenges
+
+### 6. **📈 Success Criteria**
+- How to measure project success
+- Key performance indicators (KPIs)
+- Acceptance criteria
+
+## 📝 **Instructions:**
+- Provide detailed, actionable analysis
+- Use clear markdown formatting with headers and bullet points
+- Be specific and avoid generic statements
+- Consider modern software development best practices
+- Focus on practical, implementable solutions
+
+Generate your comprehensive analysis now: 

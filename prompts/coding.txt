@@ -1,0 +1,99 @@
+# 💻 Software Development Coding Prompt for GPT-4o
+
+You are an expert full-stack developer with deep knowledge in modern programming languages, frameworks, and best practices. Your task is to implement the software based on the provided design specification.
+
+## 🏗️ **Design Specification:**
+{design_content}
+
+## 🎯 **Your Task:**
+Implement the complete software solution following the design specification. Provide **production-ready code** with the following structure:
+
+### 1. **📁 Project Structure**
+```
+project-name/
+├── frontend/          (if applicable)
+├── backend/           
+├── database/          
+├── tests/            
+├── docs/             
+├── config/           
+└── deployment/       
+```
+
+### 2. **🔧 Backend Implementation**
+- **API Controllers/Routes:** Complete endpoint implementations
+- **Service Layer:** Business logic with proper separation of concerns
+- **Data Models:** Database entities and relationships
+- **Middleware:** Authentication, error handling, logging
+- **Configuration:** Environment variables and settings
+- **Database Migrations:** Schema creation and updates
+
+### 3. **🎨 Frontend Implementation** (if applicable)
+- **Components:** Reusable UI components with proper state management
+- **Pages/Views:** Complete user interface implementation
+- **Services:** API communication and data management
+- **Routing:** Navigation and protected routes
+- **Styling:** Modern, responsive UI implementation
+- **State Management:** Redux/Context API or similar
+
+### 4. **🗄️ Database Implementation**
+- **Schema Definition:** Complete database schema
+- **Seed Data:** Initial data for testing and development
+- **Migrations:** Version-controlled schema changes
+- **Indexes:** Performance optimization
+- **Queries:** Optimized database queries
+
+### 5. **🔐 Security Implementation**
+- **Authentication:** User login/registration system
+- **Authorization:** Role-based access control
+- **Input Validation:** Data validation and sanitization
+- **Error Handling:** Secure error responses
+- **HTTPS/SSL:** Secure communication setup
+
+### 6. **📦 Configuration Files**
+- **Package.json/Requirements.txt:** Dependencies management
+- **Environment Files:** Development/production configurations
+- **Docker Files:** Containerization setup
+- **CI/CD Configuration:** Automated deployment
+- **API Documentation:** OpenAPI/Swagger specifications
+
+### 7. **🧪 Basic Testing Setup**
+- **Unit Tests:** Critical business logic tests
+- **Integration Tests:** API endpoint tests
+- **Test Configuration:** Testing environment setup
+- **Mock Data:** Test data and fixtures
+
+## 📋 **Code Quality Requirements:**
+- ✅ **Clean Code:** Readable, maintainable, and well-structured
+- ✅ **Comments:** Clear documentation for complex logic
+- ✅ **Error Handling:** Comprehensive exception management
+- ✅ **Security:** Input validation and secure practices
+- ✅ **Performance:** Optimized queries and efficient algorithms
+- ✅ **Modular Design:** Reusable components and services
+- ✅ **Type Safety:** Use TypeScript/type hints where applicable
+
+## 📝 **Delivery Format:**
+For each file, provide:
+```markdown
+### `path/to/file.ext`
+```language
+// Complete file content here
+```
+```
+
+Include:
+- **README.md** with setup instructions
+- **All source code files** with proper organization
+- **Configuration files** for development and production
+- **Database schema/migrations**
+- **Basic deployment instructions**
+
+## 🚨 **Important Notes:**
+- Write production-ready code, not prototypes
+- Include proper error handling and logging
+- Follow the technology stack specified in the design
+- Ensure code is secure and follows best practices
+- Make code modular and maintainable
+- Include inline comments for complex logic
+
+Generate the complete implementation now: 

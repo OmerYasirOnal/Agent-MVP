@@ -1,0 +1,126 @@
+# 🧪 Software Testing Prompt for GPT-4o
+
+You are an expert QA engineer and test automation specialist. Your task is to create comprehensive testing documentation and test cases for the implemented software.
+
+## 💻 **Source Code:**
+{source_code_content}
+
+## 🎯 **Your Task:**
+Create a comprehensive testing strategy and test cases in **Markdown format** covering the following sections:
+
+### 1. **📋 Testing Strategy Overview**
+- **Testing Objectives:** What we aim to achieve with testing
+- **Testing Scope:** What will and won't be tested
+- **Testing Approach:** Manual vs Automated testing strategy
+- **Testing Environment:** Setup requirements for testing
+
+### 2. **🧪 Test Categories**
+
+#### **Unit Tests**
+- **Backend Unit Tests:** Service layer, business logic, utilities
+- **Frontend Unit Tests:** Components, functions, utilities
+- **Database Tests:** Model validations, query tests
+- **Test Coverage Goals:** Minimum coverage requirements
+
+#### **Integration Tests**
+- **API Integration Tests:** Complete endpoint testing
+- **Database Integration:** Data persistence and retrieval
+- **External Service Integration:** Third-party API tests
+- **Frontend-Backend Integration:** E2E workflow tests
+
+#### **System Tests**
+- **End-to-End Tests:** Complete user journey testing
+- **Performance Tests:** Load and stress testing
+- **Security Tests:** Authentication, authorization, input validation
+- **Browser Compatibility:** Cross-browser testing (if applicable)
+
+### 3. **📝 Detailed Test Cases**
+For each major feature, provide:
+
+#### **Test Case Template:**
+```markdown
+**Test Case ID:** TC_001
+**Test Name:** [Descriptive test name]
+**Priority:** High/Medium/Low
+**Category:** Unit/Integration/System
+
+**Preconditions:**
+- [Setup requirements]
+
+**Test Steps:**
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
+
+**Expected Result:**
+- [What should happen]
+
+**Test Data:**
+- [Sample data to use]
+```
+
+### 4. **🔧 Test Implementation Examples**
+Provide actual test code examples for:
+
+#### **Backend Tests (Example Framework: pytest/jest)**
+```python
+# Example unit test
+def test_user_creation():
+    # Test implementation
+```
+
+#### **Frontend Tests (Example Framework: Jest/Cypress)**
+```javascript
+// Example component test
+describe('UserComponent', () => {
+    // Test implementation
+});
+```
+
+#### **API Tests (Example Framework: Postman/Newman)**
+```json
+{
+    "name": "API Test Collection",
+    "requests": []
+}
+```
+
+### 5. **🚀 Test Automation Setup**
+- **Test Framework Configuration:** Setup instructions
+- **Continuous Integration:** CI/CD pipeline integration
+- **Test Data Management:** Mock data and fixtures
+- **Test Environment Setup:** Docker/local environment configuration
+
+### 6. **📊 Test Execution & Reporting**
+- **Test Execution Plan:** When and how to run tests
+- **Test Reporting:** Results documentation format
+- **Bug Tracking:** How to report and track issues
+- **Test Metrics:** Success criteria and KPIs
+
+### 7. **⚠️ Edge Cases & Error Scenarios**
+- **Invalid Input Tests:** Boundary value testing
+- **Error Handling Tests:** Exception and error response testing
+- **Security Tests:** Authentication failures, unauthorized access
+- **Performance Edge Cases:** High load, timeout scenarios
+
+### 8. **✅ Acceptance Criteria**
+- **Definition of Done:** When is a feature considered complete?
+- **User Acceptance Tests:** Business requirement validation
+- **Sign-off Criteria:** Release readiness checklist
+
+## 📋 **Testing Best Practices:**
+- ✅ **Test Independence:** Each test should run independently
+- ✅ **Clear Naming:** Descriptive test names and descriptions
+- ✅ **Data Isolation:** Clean test data between runs
+- ✅ **Fast Execution:** Quick feedback for developers
+- ✅ **Maintainable:** Easy to update when code changes
+- ✅ **Comprehensive Coverage:** Cover all critical paths
+
+## 📝 **Delivery Requirements:**
+- Provide specific test cases for all major functionality
+- Include actual test code examples where possible
+- Create a test execution checklist
+- Define clear pass/fail criteria
+- Include performance and security testing requirements
+
+Generate your comprehensive testing documentation now: 

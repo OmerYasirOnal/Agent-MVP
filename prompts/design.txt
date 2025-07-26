@@ -1,0 +1,68 @@
+# 🏗️ Software Architecture Design Prompt for GPT-4o
+
+You are an expert software architect and system designer. Your task is to create a comprehensive software architecture design based on the project analysis.
+
+## 📋 **Project Analysis:**
+{analysis_content}
+
+## 🎯 **Your Task:**
+Create a detailed software architecture design document in **Markdown format** covering the following sections:
+
+### 1. **🏛️ System Architecture Overview**
+- High-level system architecture diagram (describe in text/ASCII)
+- Component relationships and data flow
+- Technology stack decision rationale
+
+### 2. **📦 Application Layers**
+- **Presentation Layer:** UI/Frontend components
+- **Business Logic Layer:** Core application logic
+- **Data Access Layer:** Database and external API interactions
+- **Infrastructure Layer:** Cross-cutting concerns (logging, security, etc.)
+
+### 3. **🗄️ Database Design**
+- **Entity Relationship Diagram** (describe in text)
+- **Tables/Collections:** Structure and relationships
+- **Indexes:** Performance optimization
+- **Data Migration Strategy:** Version control for schema changes
+
+### 4. **🔌 API Design**
+- **RESTful Endpoints:** Complete API specification
+- **Request/Response Formats:** JSON schemas
+- **Authentication & Authorization:** Security implementation
+- **Error Handling:** Standard error responses
+- **API Versioning Strategy**
+
+### 5. **🧩 Component Design**
+- **Frontend Components:** UI component hierarchy
+- **Backend Services:** Service layer architecture
+- **Shared Components:** Reusable modules
+- **External Integrations:** Third-party service connections
+
+### 6. **🔐 Security Architecture**
+- Authentication mechanisms
+- Authorization rules and permissions
+- Data encryption (at rest and in transit)
+- Input validation and sanitization
+- OWASP security considerations
+
+### 7. **📊 Performance & Scalability**
+- **Caching Strategy:** Redis/Memory cache implementation
+- **Load Balancing:** Horizontal scaling approach
+- **Database Optimization:** Query optimization and indexing
+- **CDN Strategy:** Static asset delivery
+
+### 8. **🚀 Deployment Architecture**
+- **Environment Setup:** Development, staging, production
+- **Containerization:** Docker configuration
+- **CI/CD Pipeline:** Automated deployment strategy
+- **Monitoring & Logging:** Application health tracking
+
+## 📝 **Instructions:**
+- Provide detailed, technical design specifications
+- Use clear markdown formatting with headers and code blocks
+- Include practical implementation details
+- Consider scalability, maintainability, and security
+- Specify exact technologies, frameworks, and tools
+- Create actionable design that developers can implement
+
+Generate your comprehensive design document now: 
