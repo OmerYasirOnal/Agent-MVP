@@ -310,4 +310,3 @@ This project is licensed under the MIT License.
 **Made with ❤️ by Ömer Yasir Önal([https://github.com/yourusername](https://github.com/OmerYasirOnal))**
 
 > *"From idea to implementation in minutes, not months."*
-```
